@@ -35,7 +35,7 @@ const Body = () => {
           <button
             onClick={() => {
               const filter = card.filter((x) => {
-                return x.info.avgRating > 4;
+                return x.info.avgRating > 4.2;
               });
               setCard(filter);
             }}
@@ -61,6 +61,7 @@ const Body = () => {
               const filSearch = filterSearch.filter((x) => {
                 return x.info.name.toLowerCase().includes(search.toLowerCase());
               });
+
               setCard(filSearch);
             }}
             className="py-2 px-4 border border-black m-4 rounded-xl hover:bg-slate-300"
