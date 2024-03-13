@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import RestCard from "./RestCard";
 import { REST_API, restaurant_data } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [card, setCard] = useState([]);
@@ -73,7 +74,12 @@ const Body = () => {
 
       <div className="grid  grid-cols-4">
         {card.map((rest, index) => {
-          return <RestCard key={index} data={rest} />;
+          return (
+            <Link key={index} to={"/restaurants/" + rest.info.id}>
+              {" "}
+              <RestCard key={index} data={rest} />
+            </Link>
+          );
         })}
       </div>
     </div>

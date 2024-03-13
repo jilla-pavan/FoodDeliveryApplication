@@ -1,3 +1,6 @@
+import { Link, Route } from "react-router-dom";
+import Body from "./Body";
+
 export const Nav = () => {
   return (
     <div className="flex bg-[yellowgreen] justify-between">
@@ -9,6 +12,7 @@ export const Nav = () => {
       </div>
       <div className="flex items-center">
         <ul className="flex">
+          <li className="px-8 m-2">Home</li>
           <li className="px-8 m-2">Offers</li>
           <li className="px-8 m-2">Help Us</li>
         </ul>

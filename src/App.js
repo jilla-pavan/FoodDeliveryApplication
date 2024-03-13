@@ -3,7 +3,7 @@ import "./App.css";
 import { Header } from "./components/Header";
 import Body from "./components/Body";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import RestaurantMenu from "./components/restaurantMenu";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
 
 const appRoot = createBrowserRouter([
   {
-    path: "/restaurants/:resid",
+    path: "/restaurants/:resId",
     element: <RestaurantMenu />,
   },
   {
